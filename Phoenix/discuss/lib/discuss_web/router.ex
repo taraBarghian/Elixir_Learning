@@ -1,5 +1,5 @@
-defmodule HelloWeb.Router do
-  use HelloWeb, :router
+defmodule DiscussWeb.Router do
+  use DiscussWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -7,32 +7,22 @@ defmodule HelloWeb.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
-    plug HelloWeb.Plugs.Locale, "en"
   end
 
   pipeline :api do
     plug :accepts, ["json"]
   end
 
-  scope "/", HelloWeb do
+  scope "/", DiscussWeb do
     pipe_through :browser
 
     get "/", PageController, :index
-    get "/hello", HelloController, :index
-    get "/hello/:messenger", HelloController, :show
-
   end
 
   # Other scopes may use custom stacks.
-  scope "/api", HelloWeb do
-    pipe_through :api
-
-    scope "/reviews" do
-      pipe_through [:browser, :review_checks, :other_great_stuff]
-
-
-    resources "/reviews", ReviewController
-  end
+  # scope "/api", DiscussWeb do
+  #   pipe_through :api
+  # end
 
   # Enables LiveDashboard only for development
   #
@@ -46,7 +36,7 @@ defmodule HelloWeb.Router do
 
     scope "/" do
       pipe_through :browser
-      live_dashboard "/dashboard", metrics: HelloWeb.Telemetry
+      live_dashboard "/dashboard", metrics: DiscussWeb.Telemetry
     end
   end
 end
