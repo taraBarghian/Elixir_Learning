@@ -1,4 +1,4 @@
-defmodule DiscussWeb do
+defmodule  DiscussWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
@@ -24,6 +24,11 @@ defmodule DiscussWeb do
       import Plug.Conn
       import DiscussWeb.Gettext
       alias DiscussWeb.Router.Helpers, as: Routes
+
+
+      #import MyHelperModule
+
+
     end
   end
 
@@ -71,6 +76,13 @@ defmodule DiscussWeb do
       alias DiscussWeb.Router.Helpers, as: Routes
     end
   end
+
+  #model by me
+
+
+
+
+
 
   @doc """
   When used, dispatch to the appropriate controller/view/etc.
