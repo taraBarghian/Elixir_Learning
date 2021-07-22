@@ -79,7 +79,16 @@ defmodule  DiscussWeb do
 
   #model by me
 
+  def model do
+    quote do
+      use Ecto.Schema
 
+      import Ecto
+      import Ecto.Changeset
+      import Ecto.Query
+
+    end
+  end
 
 
 

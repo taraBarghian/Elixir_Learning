@@ -5,9 +5,11 @@ defmodule DisscussWeb.Topic do
     field :title , :string
   end
 
-  def changeset(struct )
+  def changeset(struct, params \\ %{} ) do
+    struct
+    |> cast(params, [:title])
+    |> validate_required([:title])
+  end
 
-
-#todo ..... TODO Todo ToDo
 
 end
