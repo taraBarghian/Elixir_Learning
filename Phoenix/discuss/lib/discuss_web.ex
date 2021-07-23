@@ -47,6 +47,21 @@ defmodule  DiscussWeb do
     end
   end
 
+
+
+  #model by me
+
+  def model do
+    quote do
+      use Ecto.Schema
+
+      import Ecto
+      import Ecto.Changeset
+      import Ecto.Query
+
+    end
+  end
+
   def router do
     quote do
       use Phoenix.Router
@@ -55,6 +70,8 @@ defmodule  DiscussWeb do
       import Phoenix.Controller
     end
   end
+
+
 
   def channel do
     quote do
@@ -77,18 +94,6 @@ defmodule  DiscussWeb do
     end
   end
 
-  #model by me
-
-  def model do
-    quote do
-      use Ecto.Schema
-
-      import Ecto
-      import Ecto.Changeset
-      import Ecto.Query
-
-    end
-  end
 
 
 
