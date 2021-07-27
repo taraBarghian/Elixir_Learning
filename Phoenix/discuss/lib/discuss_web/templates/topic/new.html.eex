@@ -2,6 +2,7 @@
 
 <div class="form-group">
     <%= text_input f, :title, placeholder: "Title", class: "form_control" %>
+    <%= error_tag f , :title %>
 </div>
 
 <%= submit "Save Topoc" , class: "btn btn-primary" %>

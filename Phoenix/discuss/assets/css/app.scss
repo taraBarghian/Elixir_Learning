@@ -19,7 +19,7 @@
   border-color: #faebcc;
 }
 .alert-danger {
-  color: #a94442;
+  color: red;
   background-color: #f2dede;
   border-color: #ebccd1;
 }
@@ -30,7 +30,20 @@
   display: none;
 }
 .invalid-feedback {
-  color: #a94442;
+  color: pink;
   display: block;
   margin: -1rem 0 2rem;
+}
+
+// .help-block {
+//   color: pink;
+//   text-transform: capitalize;
+//   position: absolute;
+//   top: 35px;
+// }
+
+.form_group{
+  position: relative;
+  margin-bottom: 30px ;
+  color: pink;
 }
