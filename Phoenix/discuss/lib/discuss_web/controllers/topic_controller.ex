@@ -25,7 +25,6 @@ defmodule DiscussWeb.TopicController do
       conn
       |> put_flash(:info, "Topic Created!")
       |> redirect(to: Routes.topic_path(conn, :index))
-
     {:error, changeset} ->
       render conn, "new.html" , changeset: changeset
    end

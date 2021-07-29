@@ -1,13 +1,17 @@
 
-<h2> Topics: </h2>
+<h3> Topics: </h3>
+
 
 <ul class ="collection" >
-
     <%= for topic  <- @topics do %>
         <li class="collection-item">
             <%= topic.title %>
         </li>
     <% end %>
-
-
 </ul>
+
+<div class = "fix-action-btn">
+    <a class= "btn-floating btn-large waves-effect waves-light red">
+        <i class="material-icons">add</i>
+    </a>
+</div>
