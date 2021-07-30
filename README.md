@@ -9,7 +9,7 @@ I just started to learn this weird language during my internship in HUB inc.
 - [Elixir School](https://elixirschool.com/en/)
 
 
-### useful links:)
+### useful links:
 
 - [ueberauth_google](https://github.com/ueberauth/ueberauth_google)
 - [helping with google ueberauth](https://www.skcript.com/svr/setting-up-oauth-in-phoenix/)
