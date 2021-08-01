@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Discuss · Phoenix Framework</title>
+    <title>Discuss ^_^ </title>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script defer type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
@@ -16,12 +16,23 @@
 
   <body>
 
-    <nav class="blue">
-    <div class="nav-wrapper container">
-    <a href="/" class="brand_logo">
-    Discussions
-    </a>
-    </div>
+    <nav class="light-blue">
+     <div class="nav-wrapper container">
+        <a href="/" class="brand_logo">
+          Discussions
+        </a>
+        <ul class="right">
+          <%= if @conn.assigns[:user] do %>
+            <li>
+             <%= link "Sign Out", to: Routes.auth_path(@conn, :signout)  %>
+            </li>
+          <% else %>
+            <li>
+             <%= link "Sign in with google", to: Routes.auth_path(@conn, :request, "google") %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
     </nav>
 
 
