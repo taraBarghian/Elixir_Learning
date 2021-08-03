@@ -6,6 +6,8 @@ defmodule DiscussWeb.User do
     field :provider , :string
     field :token , :string
 
+    has_many :topics, DiscussWeb.Topic
+
     timestamps()
   end
 
