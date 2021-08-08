@@ -1,9 +1,9 @@
-defmodule Discuss.MixProject do
+defmodule MyApp.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :discuss,
+      app: :my_app,
       version: "0.1.0",
       elixir: "~> 1.7",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -19,8 +19,8 @@ defmodule Discuss.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Discuss.Application, []},
-      extra_applications: [:logger, :runtime_tools , :ueberauth, :ueberauth_google]
+      mod: {MyApp.Application, []},
+      extra_applications: [:logger, :runtime_tools]
     ]
   end
 
@@ -44,11 +44,7 @@ defmodule Discuss.MixProject do
       {:telemetry_poller, "~> 0.4"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"},
-      {:ueberauth,"~> 0.6"},
-      {:ueberauth_google, "~> 0.10"},
-      {:arc_ecto, "~> 0.3.1"},
-      {:arc, "0.2.0"}
+      {:plug_cowboy, "~> 2.0"}
     ]
   end
 
