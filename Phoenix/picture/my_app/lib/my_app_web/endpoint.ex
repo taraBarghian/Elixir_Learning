@@ -7,7 +7,7 @@ defmodule MyAppWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_my_app_key",
-    signing_salt: "QXgE9OhH"
+    signing_salt: "oSdqySC/"
   ]
 
   socket "/socket", MyAppWeb.UserSocket,
@@ -25,6 +25,12 @@ defmodule MyAppWeb.Endpoint do
     from: :my_app,
     gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
+
+    plug Plug.Static,
+    at: "/uploads",
+    from: Path.expand('./uploads'),
+    gzip: false
+
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
@@ -51,4 +57,6 @@ defmodule MyAppWeb.Endpoint do
   plug Plug.Head
   plug Plug.Session, @session_options
   plug MyAppWeb.Router
+
+
 end
